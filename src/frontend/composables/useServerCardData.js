@@ -441,7 +441,7 @@ export function useServerCardData(props) {
       (isDisabledByLatestLoss(def.key) ? disabled : enabled).push(def)
     }
     // 启用的节点优先且保持原顺序；不足 3 个时用禁用节点按原顺序补位
-    return [...enabled, ...disabled].slice(0, 3).map(buildThreeNetRow)
+    return [...enabled, ...disabled].slice(0, 6).map(buildThreeNetRow)
   })
 
   const hasThreeNetDetails = computed(() => threeNetDetails.value.length > 0)
